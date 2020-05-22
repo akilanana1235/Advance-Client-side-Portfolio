@@ -1,0 +1,2 @@
+I created this html files and the css using visual code. When i double clicked and open it from the normal browser the css, images and fonts
+are not showing. But it worked perfectlu in the visual code live server.
