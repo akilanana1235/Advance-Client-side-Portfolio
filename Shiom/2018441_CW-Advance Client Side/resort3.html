@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resort 3</title>
+    <link href="https://fonts.googleapis.com/css?family=Inria+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleCalander.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery-ui.js"></script>
+
+    <script src="External.js"></script>
+    <style>
+
+
+    
+
+body{
+    margin: 0;
+}
+        
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px #000;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
+@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);
+transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}
+
+@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
+
+@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;
+-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;
+-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;
+-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;
+animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}
+.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}
+.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}
+.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}
+.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}
+.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+
+#logo{
+    width: 10.89%;
+    margin-left: 40%;
+    transform: translate(2%, -25%);
+}
+    
+.header{
+
+    width: 100%;
+    background-color: rgb(39, 38, 38);
+    height: 50px;
+    transform: translate(0%, -150%);
+}
+
+.header p{
+    float: left;  
+     margin-left: 10%
+}
+
+.header a{
+    text-decoration: none;
+    color: rgb(255, 254, 251);
+}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  transform: translate(0%, -19.3%);
+  background-color: black;
+  height: 400px;
+}
+.slideshow-container img{
+    opacity: 0.5;
+}
+
+.text {
+  color: #fbfbfb;
+  font-size: 36px;
+  font-family: 'Inria Serif', serif;
+  position: absolute;
+  bottom: 35%;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.dot {
+ 
+  transition: background-color 0.6s ease;
+}
+
+.shortDes{
+
+float: left;
+width: 35%;
+margin-left: 5%;
+
+
+}
+
+#about p {
+
+font-family: "Poppins", sans-serif;
+}
+
+
+.picAbout{
+  float: left;
+  width: 60%;
+}
+
+.favList{
+
+float: left;
+position: absolute;
+color: red;
+background-color: gold;
+margin-top: 347px;
+margin-left: 10%;
+width: 20%;
+
+
+}
+
+.favList p{
+  text-align: center;
+}
+
+
+.gallery{
+
+  margin-top: 500px;
+}
+
+.container1 {
+  float: left;
+  position: relative;
+width: 45%;
+  color: white;
+  margin-left: 2%;
+  
+  height: 460px;
+  /* margin-left: 10%; */
+}
+
+.container2{
+  float: left;
+  position: relative;
+width: 25%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+  
+}
+
+.container3{
+  float: left;
+  position: relative;
+width: 25%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+  /* margin-top: 10px; */
+  
+
+
+}
+.container4{
+  float: left;
+  position: relative;
+width: 50.5%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+   margin-top: 10px; 
+  
+
+
+}
+
+#sgr{
+
+  opacity: 0.7;
+}
+
+
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  margin-top: 100px;
+  
+}
+
+/* Hide the images by default */
+.mySlides2 {
+  display: none;
+  
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 58%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev{
+
+  left: 2%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#gallery{
+
+margin-left: 42%;
+letter-spacing: 4px;
+  line-height: 18px;
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 400px;
+ 
+}
+
+
+#map{
+
+margin-left: 30%;
+letter-spacing: 4px;
+  line-height: 18px;
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+footer{
+    background: #7e8d9b;
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+
+}
+
+.me{
+
+  margin-top: 150px;
+}
+.me p{
+
+  margin-left: 38% ;
+ color: snow;
+ font-family: "Poppins", sans-serif;
+ font-size: 12px;
+}
+
+.me span{
+  margin-left: 7%;
+}
+#tabs{
+  width: 80%;
+  margin-left: 10%;
+}
+
+
+#standard{
+
+  width: 100%;
+  height: 85px;
+  border-bottom: 1px solid grey;
+
+}
+
+#deluxe{
+  width: 100%;
+  height: 85px;
+  border-bottom: 1px solid grey;
+  margin-top: 30px;
+}
+#suite{
+  width: 100%;
+  height: 85px;
+ border-bottom: 1px solid grey;
+  margin-top: 30px;
+}
+
+
+#tabs-2 img{
+
+  float: left;
+ 
+}
+
+#tabs-2 p{
+
+  float: left;
+}
+
+.aFav{
+font-size: 20px;
+color: red;
+width: 20%;
+ 
+}
+
+.rFav{
+  margin-left: 5%;
+  font-size: 20px;
+  width: 20%;
+}
+    </style>
+</head>
+
+<body>
+    
+        <div class="snowflakes" aria-hidden="true">
+                <div class="snowflake">
+                ❅
+                </div>
+                <div class="snowflake">
+                ❆
+                </div>
+                <div class="snowflake">
+                ❅
+                </div>
+                <div class="snowflake">
+                ❆
+                </div>
+                <div class="snowflake">
+                ❅
+                </div>
+                <div class="snowflake">
+                ❆
+                </div>
+                <div class="snowflake">
+                  ❅
+                </div>
+                <div class="snowflake">
+                  ❆
+                </div>
+                <div class="snowflake">
+                  ❅
+                </div>
+                <div class="snowflake">
+                  ❆
+                </div>
+                <div class="snowflake">
+                  ❅
+                </div>
+                <div class="snowflake">
+                  ❆
+                </div>
+
+
+                <img src="Logo.png" id="logo">
+                        
+        <div class="header">
+
+
+                <p style="margin-left: 25%;"> <a href="#aboutResort"> ABOUT</a></p>
+                <p  >  <a href="#gallery">GALLERY</a> </p>
+                <p  > <a href="#tabs-1">MAP</a> </p>
+                <p  > <a href="#tabs-1">ACCOMADATION</a> </p>
+              
+
+
+        </div>  
+
+
+        <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                
+                  <img src="res3picN.jpg" style="width:100%; height: 400px;">
+                  <div class="text">PearlOf Life,Kytes</div>
+                </div>
+                
+                <div class="mySlides fade">
+                 
+                  <img src="res3pic2.jpg" style="width:100% ; height: 400px;">
+                  <div class="text">To Experience in Luxury Cousine</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  
+                  <img src="res3pic3.jpg" style="width:100%; height: 400px;">
+                  <div class="text">For New Adventures</div>
+                </div>
+                
+                
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+
+
+                
+
+                  <div class="shortDes" id="about">
+
+                    <h2>About</h2>
+                    <p>
+                        "Beautifully located in one of the beautifullest  creeks on the island, Pearl of life welcomes the most demanding of guests into a world of supreme refinement.
+                        <br> <br> <b>Price Per Night:</b>  $18062 <br> <br> <b>Comfert Level:</b> &#11088 &#11088 &#11088 &#11088 &#11088  &#11088  &#11088 <br><br>
+                        <b>Things To Do:</b> Gaming, Futsal, Boat Ride, Scuba Diving, Surfing, Sailing
+                        
+                    </p>
+
+                  </div>
+                 
+                    <div class="picAbout">
+
+                      <img src="res3pic1.jpg" height="400px" width="100%">
+
+                    </div>
+                    <div class="favList" onclick="myFunction()">
+                        <!-- <a href="#" style="text-decoration: none;">
+                            <p style="font-family: Raleway, sans-serif; color: red;"> &#128077 Like Us Now</p> -->
+
+                            <p id="resort3">
+                                    <button class="aFav">&#10084 </button>
+                                    <button class="rFav">🗑</button>
+                            </p>
+                        </a>
+                       
+                        
+                      </div>
+                 
+                                    
+                    <div class="gallery" >
+
+                        <p id="gallery">The Best Of Us</p>
+
+                        <div class="container1">  
+
+                            <div class="mySlides2">
+                 
+                                <a href="res3pic4.jpg" ><img src="res3pic4.jpg" style="width:100%; height: 460px;"  >  </a>
+                                
+                              </div>
+                            
+                              <div class="mySlides2">
+                              
+                                <a href="res3pic5.jpg"> <img src="res3pic5.jpg" style="width:100% ; height: 460px;"></a>
+                               
+                              </div>
+                            
+                              <div class="mySlides2">
+                               
+                                <a href="res3pic6.jpg"> <img src="res3pic6.jpg" style="width:100% ; height: 460px;"></a>
+                               
+                              </div>
+                                
+                              <div class="mySlides2">
+                                
+                                <a href="res3pic7.jpg"><img src="res3pic7.jpg" style="width:100% ; height: 460px;"></a>
+                                
+                              </div>
+                            
+                              
+                                
+                              <a class="prev" onclick="plusSlides(-1)">❮</a>
+                              <a class="next" onclick="plusSlides(1)">❯</a>
+                            
+                          
+              
+                     </div>
+              
+                      
+              
+              
+                      <div class="container2">  
+              
+                          
+                          
+                          <a href="res3pic8.jpg"> <img src="res3pic8.jpg" width="100%" height="225px" id="sgr"></a>
+              
+              
+                   </div>
+              
+                   <div class="container3">  
+              
+                      <a href="res3pic9.jpg"> <img src="res3pic9.jpg" width="100%" height="225px" id="sgr"></a>
+                      
+                     
+              
+             
+              
+              
+                    </div>
+              
+                    <div class="container4">  
+              
+                        <a href="res3pic10.jpg"> <img src="res3pic10.jpg" width="100%" height="225px" id="sgr"></a>
+                      
+              </div>
+
+
+                    </div>
+
+                   
+
+                    <div id="tabs">
+
+                        <p id="map">Exploring Our World Beyond The Beach</p>
+                        <ul>
+                          <li style="margin-left: 40%;"><a href="#tabs-1" style="font-family: 'Sulphur Point', sans-serif;">Map</a></li>
+                          <li><a href="#tabs-2"  style="font-family: 'Sulphur Point', sans-serif;">Accomadation</a></li>
+                          <li><a href="#tabs-3"  style="font-family: 'Sulphur Point', sans-serif;">Our Aim</a></li>
+                        </ul>
+                        <div id="tabs-1" style="height: 337px; width: 100%;">
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62932.32319965488!2d79.87750315693668!3d9.657938529978793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe4e041eea5b6d%3A0x9225766731b10d83!2sKayts!5e0!3m2!1sen!2slk!4v1577692585013!5m2!1sen!2slk"
+                            width="96%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+                           
+
+                        
+                        </div>
+    
+                        <div id="tabs-2" style="height: 337px;  width:96%;" >
+    
+                          <div id="standard">
+    
+                            <p>Standard Room</p>
+                            <a href="standard.jpg">
+    
+                                <img src="standard.jpg"  height="80px" width="100px" style=" margin-left: 65%;">
+    
+                            </a>
+                           
+                          </div>
+    
+                          <div id="deluxe">
+                            <p>Deluxe Room</p>
+                            
+                            <a href="deluxe.jpg">
+    
+                                <img src="deluxe.jpg"  height="80px" width="100px" style=" margin-left: 67.7%;">
+                            </a>
+                           
+                          </div>
+                          <div id="suite">
+                            <p>Royal Suite</p>
+    
+                            <a href="suite.jpg">
+    
+                                <img src="suite.jpg" height="80px" width="100px" style=" margin-left: 70%;"> 
+                            </a>
+                          
+                          </div>
+                          
+                        </div>
+    
+                        <div id="tabs-3" style="height: 337px; width: 100%;">
+    
+                            <p style=" font-family: Poppins, sans-serif;">"In a remote beauty spot, savour the luxury of Kytes lifestyle. <br> The idyllic natural setting is enhanced by the sublime decor
+                                 designed by Marc Hertrich and Nicolas Adnet, and the Resort's top-end comfort is perfectly reflected in its beautifully spacious rooms. <br>
+                                  The exce6ptional CINQ MONDES Spa* and luxurious overflow pool add an ideally Zen touch.<br> The Resort is entirely devoted to fulfilling its guests' desires and offers discreet, 
+                                personal service in its swimming areas, bars and 'Table Gourmet' restaurants.",
+            
+                             </p>
+                           
+                      </div>
+                    </div>
+    
+                               
+                    
+
+                    <footer>
+
+                        <p style=" margin-left: 36%; margin-top: 40px; font-family: 'Ubuntu', sans-serif; color: rgb(226, 220, 216);" >  Terms & Conditions | Privacy Policy | Security </p>
+            
+                <img src="Logo.png" style="float: left; margin-left: 30%;"  width="7%"> 
+                <img src="fb.png" style="float: left; margin-left: 2%; margin-top: 27px;"  width="3%"> 
+                
+                <img src="twit.png" style="float: left; margin-left: 2%; margin-top: 32px;"  width="2.4%"> 
+                <img src="wapp.png" style="float: left; margin-left: 2%; margin-top: 32px;"  width="2.4%"> 
+                <img src="emir.png" style="float: left; margin-left: 2%; margin-top: 28px;"  width="4%"> 
+                <img src="cin.png" style="float: left; margin-left: 2%; margin-top: 36px;"  width="7%"> 
+    
+            
+               
+                <div class="me">
+                    <p>Website Designed & Developed by Shiom Perera <br> <span> 2018441  | w1742311 | 19.12.2019</span></p>
+                  </div>
+                    </footer>
+    
+
+<script>
+
+$(document).ready(function(){
+
+$( "#tabs" ).tabs();
+});
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+
+
+//---------------------------------
+
+var slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+function plusSlides(n) {
+  showSlides2(slideIndex2 += n);
+}
+
+function currentSlide(n) {
+  showSlides2(slideIndex2 = n);
+}
+
+function showSlides2(n) {
+  var i;
+  var slides2 = document.getElementsByClassName("mySlides2");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides2.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = slides2.length}
+  for (i = 0; i < slides2.length; i++) {
+      slides2[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides2[slideIndex2-1].style.display = "block";
+  dots[slideIndex2-1].className += " active";
+  captionText.innerHTML = dots[slideIndex2-1].alt;
+}
+</script>
+
+
+
+
+</body>
+</html>

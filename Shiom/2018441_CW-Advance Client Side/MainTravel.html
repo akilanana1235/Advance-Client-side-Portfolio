@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mainpage Travel </title>
+        <link rel="shortcut icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64" href="loc.png">
+   
+
+
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery-ui.js"></script>
+   
+    
+    <link rel="stylesheet" href="styleCalander.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+    
+    body {
+  margin: 0;  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+input[type=text]:focus {
+  border-bottom: 2px solid red;
+} 
+
+.input{
+
+    
+             float: left; 
+               margin-left: 0.5%; 
+                width: 14%;
+                 padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid transparent;
+         border-radius: 4px;
+         height: 55px;
+}
+
+#vacationName{
+
+  margin-left: 1%; width: 20%; 
+}
+
+footer{
+    background: #d4d9dd;
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.largePic{
+
+
+height: 500px;
+position: relative;
+
+background-color:black;
+}
+
+.header{
+
+position: absolute;
+top: 0%;
+left:2%;
+width: 100%;
+ transform: translate(-0%, -20%);
+}
+
+
+#Fgr{
+
+opacity:0.7;
+width: 100%;
+ height:500px;
+}
+
+
+.form{
+
+
+border-radius: 8px;
+position: absolute;
+top: 40%;
+left:5%;
+width: 90%;
+background-color: #febb02;
+height: 170px;
+border: 1px solid red;
+/* background-color: white;
+border-bottom: 1px solid black; */
+}
+::placeholder {
+  color: grey;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#searchButton{
+
+
+float: left;
+margin-left:0.5% ;
+height: 48px;
+width: 48px;
+}
+
+.imageCards{
+
+  margin-top: 60px;
+}
+
+#text1{
+  position: absolute;
+  top: 2%;
+  left: 3%;
+  transform: translate(2%, -30%);
+}
+
+
+.container1 {
+  float: left;
+  position: relative;
+width: 45%;
+  color: white;
+  margin-left: 2%;
+  background-color: black;
+  height: 460px;
+  /* margin-left: 10%; */
+}
+
+.pic1M{
+
+
+width:100%;
+height: 460px;
+}
+
+.container2{
+  float: left;
+  position: relative;
+width: 25%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+  
+}
+
+.container3{
+  float: left;
+  position: relative;
+width: 25%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+  /* margin-top: 10px; */
+  
+
+
+}
+.container4{
+  float: left;
+  position: relative;
+width: 50.5%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+   margin-top: 10px; 
+  
+
+
+}
+
+#sgr{
+
+  opacity: 0.7;
+}
+
+#text2{
+  position: absolute;
+  bottom: 0.1%;
+  right: 3%;
+  transform: translate(2%, -9%);
+  background-color: rgb(56, 56, 56);
+  width: 22%;
+  
+}
+
+#text1 p{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 23px;
+
+  
+}
+
+#text2 p{
+text-align: center;
+  font-size: 10px;
+  font-family: 'Crete Round', serif;
+
+}
+
+.card img{
+
+  width: 100%;
+  height: 200px;
+  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card h4{
+
+margin-left: 1%;
+font-size: 24px;
+font-family: "Raleway", sans-serif;
+    font-weight: 400;
+}
+
+.card h5{
+
+  margin-left: 1%;
+  color: rgb(194, 18, 18);
+  
+}
+
+.card p{
+
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  margin-left: 1%;
+
+}
+
+.card a{
+
+  text-decoration: none;
+  color: rgb(116, 116, 121);
+  margin-bottom: 20px;
+  font-size: 12px;
+  margin-left: 35%;
+}
+
+.card span{
+
+  float: right;
+  margin-right: 5%;
+  color: red;
+  font-size: 20px;
+}
+
+
+
+
+.card button{
+
+  
+float: right;
+margin-right: 5%;
+
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 25%;
+  float: left;
+  margin-left: 7%;
+  height: 520px;
+  margin-top: 30px;
+  
+ border-radius: 15px;
+}
+.contain {
+  padding: 2px 16px;
+}
+
+#result{
+  margin-left: 40%; 
+  font-size: 25px;
+   margin-top: 50px;}
+
+
+.choose p{
+
+  font-size: 20px; 
+  margin-left: 1%;
+   font-family: 'Roboto Slab', serif;
+    color: rgb(54, 52, 52); 
+    font-weight: 900;
+    
+}
+
+.choose button{
+
+  margin-left: 66.1%;
+  font-family: 'Roboto Slab', serif;
+  background-color: rgba(0,0,0,0.2);
+  color: aliceblue;
+}
+
+
+
+/*------------------------------------------------------------------------------Media Query---------------------------------------------------------------------------------------*/
+
+  @media only screen and (min-width: 992px) {
+
+         
+    body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+input[type=text]:focus {
+  border-bottom: 2px solid red;
+} 
+
+.input{
+
+    
+             float: left; 
+               margin-left: 0.5%; 
+                width: 14%;
+                 padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid transparent;
+         border-radius: 4px;
+         height: 55px;
+}
+
+#vacationName{
+
+  margin-left: 1%; width: 20%; 
+}
+
+footer{
+    background: #d4d9dd;
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.largePic{
+
+
+height: 500px;
+position: relative;
+
+background-color:black;
+}
+
+.header{
+
+position: absolute;
+top: 0%;
+left:2%;
+width: 100%;
+ transform: translate(-0%, -20%);
+}
+
+
+#Fgr{
+
+opacity:0.7;
+width: 100%;
+ height:500px;
+}
+
+
+.form{
+
+
+border-radius: 8px;
+position: absolute;
+top: 40%;
+left:5%;
+width: 90%;
+background-color: #febb02;
+height: 170px;
+border: 1px solid red;
+/* background-color: white;
+border-bottom: 1px solid black; */
+}
+::placeholder {
+  color: grey;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#searchButton{
+
+
+float: left;
+margin-left:0.5% ;
+height: 48px;
+width: 48px;
+}
+
+.imageCards{
+
+  margin-top: 60px;
+}
+
+#text1{
+  position: absolute;
+  top: 2%;
+  left: 3%;
+  transform: translate(2%, -30%);
+}
+
+
+.container1 {
+  float: left;
+  position: relative;
+width: 45%;
+  color: white;
+  margin-left: 2%;
+  background-color: black;
+  height: 460px;
+  /* margin-left: 10%; */
+}
+
+.pic1M{
+
+
+width:100%;
+height: 460px;
+}
+
+.container2{
+  float: left;
+  position: relative;
+width: 25%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+  
+}
+
+.container3{
+  float: left;
+  position: relative;
+width: 25%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+  /* margin-top: 10px; */
+  
+
+
+}
+.container4{
+  float: left;
+  position: relative;
+width: 50.5%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+   margin-top: 10px; 
+  
+
+
+}
+
+#sgr{
+
+  opacity: 0.7;
+}
+
+#text2{
+  position: absolute;
+  bottom: 0.1%;
+  right: 3%;
+  transform: translate(2%, -9%);
+  background-color: rgb(56, 56, 56);
+  width: 22%;
+  
+}
+
+#text1 p{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 23px;
+
+  
+}
+
+#text2 p{
+text-align: center;
+  font-size: 10px;
+  font-family: 'Crete Round', serif;
+
+}
+
+.card img{
+
+  width: 100%;
+  height: 200px;
+  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card h4{
+
+margin-left: 1%;
+font-size: 24px;
+font-family: "Raleway", sans-serif;
+    font-weight: 400;
+}
+
+.card h5{
+
+  margin-left: 1%;
+  color: rgb(194, 18, 18);
+  
+}
+
+.card p{
+
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  margin-left: 1%;
+
+}
+
+.card a{
+
+  text-decoration: none;
+  color: rgb(116, 116, 121);
+  margin-bottom: 20px;
+  font-size: 12px;
+  margin-left: 35%;
+}
+
+.card span{
+
+  float: right;
+  margin-right: 5%;
+  color: red;
+  font-size: 20px;
+}
+
+
+
+
+.card button{
+
+  
+float: right;
+margin-right: 5%;
+
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 25%;
+  float: left;
+  margin-left: 7%;
+  height: 520px;
+  margin-top: 30px;
+  
+ border-radius: 15px;
+}
+.contain {
+  padding: 2px 16px;
+}
+
+#result{
+  margin-left: 40%; 
+  font-size: 25px;
+   margin-top: 50px;}
+
+
+.choose p{
+
+  font-size: 20px; 
+  margin-left: 1%;
+   font-family: 'Roboto Slab', serif;
+    color: rgb(54, 52, 52); 
+    font-weight: 900;
+    
+}
+
+.choose button{
+
+  margin-left: 66.1%;
+  font-family: 'Roboto Slab', serif;
+  background-color: rgba(0,0,0,0.2);
+  color: aliceblue;
+}
+
+
+  
+} 
+
+
+
+/*------------------------------------------------------------------------------Media Query---------------------------------------------------------------------------------------*/
+
+
+@media only screen  and (max-width: 992px) {
+
+  
+
+.header{
+
+position: absolute;
+top: 0%;
+left:2%;
+width: 100%;
+ transform: translate(-0%, -20%);
+}
+
+
+.input{
+
+    
+
+  margin-left: 0.5%; 
+   width: 50%;
+    padding: 12px 20px;
+box-sizing: border-box;
+border: 2px solid transparent;
+border-radius: 4px;
+height: 55px;
+margin-top: 10px;
+margin-left: 25%;
+
+}
+
+#vacationName{
+
+  margin-left: 25%;
+width: 50%; 
+}
+
+
+#Fgr{
+
+opacity:0.7;
+width: 100%;
+ height:680px;
+}
+
+
+.form{
+
+border-radius: 8px;
+position: absolute;
+top: 23%;
+left:5%;
+width: 90%;
+background-color: #febb02;
+height: 540px;
+border: 1px solid red;
+/* background-color: white;
+border-bottom: 1px solid black; */
+}
+
+.imageCards{
+
+margin-top: 190px;
+}
+
+#searchButton{
+
+margin-top: 20px;
+margin-left:5% ;
+height: 48px;
+width: 48px;
+}
+
+
+.container1 {
+  
+  position: relative;
+width: 100%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+  margin-top: 10px;   
+}
+
+.pic1M{
+
+
+  width:100%;
+  height: 225px;
+}
+
+.container2{
+ 
+  position: relative;
+width: 100%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+  margin-top: 10px; 
+  
+}
+
+.container3{
+ 
+  position: relative;
+width: 100%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+  margin-top: 10px; 
+  /* margin-top: 10px; */
+  
+
+
+}
+.container4{
+
+  position: relative;
+width: 100%;
+  color: white;
+  margin-left: 0.5%;
+  background-color: black;
+  height: 225px;
+   margin-top: 10px; 
+
+
+}
+
+.choose button{
+
+margin-left: 80%;
+font-family: 'Roboto Slab', serif;
+background-color: rgba(0,0,0,0.2);
+color: aliceblue;
+}
+
+
+.card {
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+width: 90%;
+height: 520px;
+margin-top: 30px;
+border-radius: 15px;
+margin-left: 5%;
+}
+
+
+
+.contain {
+padding: 2px 16px;
+}
+
+#result{
+margin-left: 35%; 
+font-size: 25px;
+ margin-top: 240px;}
+
+
+
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="largePic">
+
+        <img src="bg2.jpg"  id="Fgr"/>
+
+      <div class="header">
+
+          <img src="Logo.png" style=" float: left; width: 20%;">
+
+
+           
+      </div>
+
+      
+      <div class="form">
+
+          <div class="choose"> 
+
+              <p>Choose Your Vacation  <button class="viewFavs">Your Favourites</button>  </p>
+          </div>
+
+
+          <input type="text" id="vacationName" class="input"  placeholder="&#9992 Location/Resort? ">
+        
+        <input type="text" name="comfort" id="comfortLevel" class="input" placeholder="&#10036 Comfert Level ">
+            
+      
+        <input type="text" id="activities" class="input"  placeholder="&#9917 Activities">
+
+<input type="text" id="datepicker"class="input" placeholder="&#128198 Check-In">
+
+<input type="text" id="datepicker2" class="input" placeholder="&#128198 Check-Out ">
+
+<select name="price" class="input" id="price">
+  <option value="">&#8364 Price</option>
+    <option value="2500" > &#8364 1000 - &#8364 5000 </option>
+    <option value="7500" >  &#8364 5000 - &#8364 10000 </option>
+    <option value="12500"> &#8364 10000 - &#8364 15000 </option>
+    <option value="17500"> &#8364 15000 - &#8364 20000 </option>
+   
+    </select>
+
+     
+
+        <input type="image"  id="searchButton" src="search.jpg" alt="Submit" >
+    
+    
+  
+      </div>
+        </div>
+
+       
+
+       <div class="imageCards">
+
+
+
+          <div class="container1">  
+
+              <img src="sing.jpg" class="pic1M" id="sgr">
+              
+              <div id="text1">
+              
+                <p>Visit Singapore </p>
+                
+              </div>
+
+              <div id="text2">
+                <p>Average Price <br> <span style="font-size: 14px;">SG$ 2300</span></p>
+              </div>
+
+
+       </div>
+
+        
+
+
+        <div class="container2">  
+
+            <img src="italy.jpg" width="100%" height="225px" id="sgr">
+            
+            <div id="text1">
+            
+              <p>Visit Italy </p>
+              
+            </div>
+
+            <div id="text2">
+              <p>Average Price <br> <span style="font-size: 14px;">US$4500</span></p>
+            </div>
+
+
+     </div>
+
+     <div class="container3">  
+
+        <img src="vegas.jpg" width="100%" height="225px" id="sgr">
+        
+        <div id="text1">
+        
+          <p>Visit Las Vegas </p>
+          
+        </div>
+
+        <div id="text2">
+          <p>Average Price <br> <span style="font-size: 14px;">US$ 10000</span></p>
+        </div>
+
+
+       
+
+
+
+
+      </div>
+
+      <div class="container4">  
+
+          <img src="land.jpg" width="100%" height="225px" id="sgr">
+          
+          <div id="text1">
+          
+            <p>Visit Las Vegas </p>
+            
+          </div>
+  
+          <div id="text2">
+            <p>Average Price <br> <span style="font-size: 14px;">US$ 10000</span></p>
+          </div>
+</div>
+</div>
+
+<p id="result"></p>
+
+<div id="searchResult">
+
+
+</div>
+
+
+
+
+
+<div id="favResorts">
+
+
+</div>
+
+
+  
+     <footer>
+
+        <p style="margin-left: 35%; font-size: 12px; font-family: 'Ubuntu', sans-serif; margin-top: 30px; color: royalblue; ">Traveholic is the number 1 travel site in whole of south asia. </p>
+      
+
+            <img src="Logo.png" style="float: left; margin-left: 30%;"  width="7%"> 
+            <img src="fb.png" style="float: left; margin-left: 2%; margin-top: 27px;"  width="3%"> 
+            
+            <img src="twit.png" style="float: left; margin-left: 2%; margin-top: 32px;"  width="2.4%"> 
+            <img src="wapp.png" style="float: left; margin-left: 2%; margin-top: 32px;"  width="2.4%"> 
+            <img src="emir.png" style="float: left; margin-left: 2%; margin-top: 28px;"  width="4%"> 
+            <img src="cin.png" style="float: left; margin-left: 2%; margin-top: 36px;"  width="7%"> 
+
+        
+            <p style=" margin-left: 36%; margin-top: 100px; font-family: 'Ubuntu', sans-serif; color: rgb(194, 182, 173);" >  Terms & Conditions | Privacy Policy | Security </p>
+        
+
+     </footer>
+    
+     
+     
+   
+     
+     <script src="External.js">
+     
+     
+     </script>
+
+
+
+     
+
+
+</body>
+
+
+</html>
